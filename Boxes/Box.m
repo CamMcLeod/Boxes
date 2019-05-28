@@ -14,11 +14,17 @@
 {
     self = [super init];
     if (self) {
+        // init with box dimensions
         _height = boxHeight;
         _width = boxWidth;
         _length = boxLength;
     }
     return self;
+}
+
+-(float) volume {
+    // calculate box volume
+    return self.height * self.width * self.length;
 }
 
 @end
