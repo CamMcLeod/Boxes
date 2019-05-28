@@ -10,10 +10,11 @@
 
 @implementation Box
 
-- (instancetype)initWithHeight: (float) boxHeight andWidth: (float) boxWidth andLength: (float) boxLength
-{
+- (instancetype)initWithHeight: (float) boxHeight andWidth: (float) boxWidth andLength: (float) boxLength {
+    
     self = [super init];
     if (self) {
+        
         // init with box dimensions
         _height = boxHeight;
         _width = boxWidth;
@@ -23,8 +24,15 @@
 }
 
 -(float) volume {
+    
     // calculate box volume
     return self.height * self.width * self.length;
+}
+
+- (int) insideBox:(Box *)smallBox {
+    
+    //return full number of small boxes that will fit inside main box
+    return (int) self.volume/smallBox.volume;
 }
 
 @end

@@ -19,6 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (instancetype)initWithHeight: (float) boxHeight andWidth: (float) boxWidth andLength: (float) boxLength;
 
 - (float) volume;
+- (int) insideBox:(Box *)smallBox;
 
 @end
 
